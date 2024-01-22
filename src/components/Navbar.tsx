@@ -120,14 +120,16 @@ const Navbar: React.FC = () => {
                         placeholder="Search..."
                         className="text-black w-full px-2 py-1 border rounded-md focus:outline-none"
                       />
-                      {/* Separator */}
-                      {/* <hr className="my-2 w-full" /> */}
                       <SearchIcon className="absolute right-2 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500" />
                       {searchTerm && (
-                        <div className="absolute z-10 top-full left-0 right-0 bg-white border max-h-60 overflow-y-auto">
-                          <div className="p-2 z-20 hover:bg-gray-100 text-black">
-                            test
-                          </div>
+                        <div className="absolute z-10  top-full left-0 right-0 bg-white max-h-60 overflow-y-auto">
+                          {movieListByQuery?.results?.map((movie: any) => (
+                            <Link key={movie.id} to={`/movie/${movie.id}`}>
+                              <div className="p-2 hover:bg-gray-100 text-black">
+                                {movie.title}
+                              </div>
+                            </Link>
+                          ))}
                         </div>
                       )}
                     </div>
