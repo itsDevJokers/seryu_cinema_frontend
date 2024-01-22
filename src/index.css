@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Mengatur tampilan scrollbar secara global */
+::-webkit-scrollbar {
+  width: 12px; /* Lebar scrollbar untuk vertikal scrolling */
+  height: 12px; /* Tinggi scrollbar untuk horizontal scrolling */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Jalur scrollbar transparan */
+}
+
+::-webkit-scrollbar-thumb {
+  background: grey; /* Warna thumb menjadi abu-abu */
+  border-radius: 10px; /* Membuat sudut thumb menjadi bulat */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: darkgrey; /* Warna thumb saat di-hover menjadi abu-abu gelap */
+}
+
